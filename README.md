@@ -47,12 +47,12 @@ llm/
 
 ---
 
-<details>
-<summary><strong># Реализованные модели
+# Реализованные модели
 
 ---
 
-##1️⃣ GPT-1 
+<details>
+<summary><strong>1️⃣ GPT-1 </strong></summary>
 
 ### Архитектура
 
