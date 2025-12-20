@@ -65,7 +65,7 @@ llm/
 ---
 
 ### 📂 Структура `models/gpt1`
-[Датасет]([https://example.com](https://github.com/JoannaBy/RussianNovels/tree/master))
+**Датасет:** [Russian Novels](https://github.com/JoannaBy/RussianNovels/tree/master)
 ```text
 models/gpt1/
 ├── checkpoints/
