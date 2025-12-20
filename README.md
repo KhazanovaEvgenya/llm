@@ -51,7 +51,8 @@ llm/
 
 ---
 
-## 1️⃣ GPT-1 
+<details>
+<summary><strong> ##1️⃣ GPT-1 
 
 ### Архитектура
 
