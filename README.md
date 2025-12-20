@@ -23,9 +23,6 @@ llm/
     ├── gpt1/                  # Реализация GPT-1
     │   ├── checkpoints/       # Сохранённые веса моделей
     │   │   └── gpt_checkpoint.pt
-    │   ├── data/              # Данные и токены
-    │   │   ├── tokenizer.json
-    │   │   └── token_ids.pt
     │   └── src/
     │       ├── bpe/           # Byte Pair Encoding токенизатор
     │       │   ├── __init__.py
@@ -68,13 +65,11 @@ llm/
 ---
 
 ### 📂 Структура `models/gpt1`
+[Датасет]([https://example.com](https://github.com/JoannaBy/RussianNovels/tree/master))
 ```text
 models/gpt1/
 ├── checkpoints/
 │ └── gpt_checkpoint.pt # веса модели
-├── data/
-│ ├── tokenizer.json # словари BPE
-│ └── token_ids.pt # токены всего корпуса
 └── src/
 ├── bpe/
 │ ├── init.py
