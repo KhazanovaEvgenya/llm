@@ -52,7 +52,7 @@ llm/
 ---
 
 <details>
-<summary><strong>1️⃣ GPT-1 </strong></summary>
+<summary><strong> GPT-1 </strong></summary>
 
 ### Архитектура
 
@@ -124,7 +124,8 @@ python -m models.gpt1.src.scripts.generate
 | learning_rate | 1e-5 – 2.5e-4 |
 | batch_size    | 32–128        |
 
-<summary><strong>1️⃣ GPT-2 </strong></summary>
+<details>
+<summary><strong> GPT-2 </strong></summary>
 
 ### Архитектура
 
