@@ -123,3 +123,78 @@ python -m models.gpt1.src.scripts.generate
 | dropout       | 0.1–0.2       |
 | learning_rate | 1e-5 – 2.5e-4 |
 | batch_size    | 32–128        |
+
+<summary><strong>1️⃣ GPT-2 </strong></summary>
+
+### Архитектура
+
+- Decoder-only Transformer
+- Masked Multi-Head Self-Attention
+- KV-cache (Key / Value caching)
+- Residual connections
+- LayerNorm (Pre-LN)
+- FeedForward блоки (Linear → GELU → Linear)
+- next-token prediction
+---
+
+### 📂 Структура `models/gpt1`
+**Датасет:** [Russian Novels](https://github.com/JoannaBy/RussianNovels/tree/master)
+```text
+models/gpt2/
+├── checkpoints/
+│   └── gpt2_checkpoint.pt        # веса модели
+├── data/
+│   ├── corpus/                   # исходные тексты 
+├── src/
+│   ├── bpe/
+│   │   ├── bpe.py                # реализация BPE
+│   │   └── tokenizer_generate.py # обучение токенайзера
+│   ├── model/
+│   │   ├── __init__.py
+│   │   ├── activations.py        # GELU
+│   │   └── gpt2.py               # модель GPT-2 + KV-cache
+│   └── scripts/
+│       ├── encode_corpus.py      # кодирование корпуса в token_ids.pt
+│       ├── train.py              # обучение модели
+│       └── generate.py           # генерация текста
+```
+
+---
+
+### 🧾 Данные
+
+- `tokenizer.json`  
+  Содержит:
+  - `token2id`
+  - `id2token`
+  - `vocab_size`
+
+- `token_ids.pt`  
+  Один длинный тензор токенов всего корпуса  
+  Используется для формирования train / validation выборок
+
+---
+
+### 🚀 Обучение
+
+Запуск обучения из корня репозитория:
+
+```bash
+python -m models.gpt2.src.scripts.train
+```
+✨ Генерация текста
+```bash
+python -m models.gpt2.src.scripts.generate
+```
+⚙️ Пример параметров обучения
+
+| Параметр      | Значение          |
+| ------------- | ----------------- |
+| vocab_size    | из tokenizer.json |
+| seq_len       | 128 – 256         |
+| emb_size      | 256               |
+| num_heads     | 4 – 8             |
+| num_layers    | 4 – 8             |
+| dropout       | 0.1               |
+| learning_rate | 3e-4              |
+| batch_size    | 32 – 64           |
