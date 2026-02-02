@@ -124,6 +124,8 @@ python -m models.gpt1.src.scripts.generate
 | learning_rate | 1e-5 – 2.5e-4 |
 | batch_size    | 32–128        |
 
+</details>
+
 <details>
 <summary><strong> GPT-2 </strong></summary>
 
@@ -138,7 +140,7 @@ python -m models.gpt1.src.scripts.generate
 - next-token prediction
 ---
 
-### 📂 Структура `models/gpt1`
+### 📂 Структура `models/gpt2`
 **Датасет:** [Russian Novels](https://github.com/JoannaBy/RussianNovels/tree/master)
 ```text
 models/gpt2/
@@ -199,3 +201,5 @@ python -m models.gpt2.src.scripts.generate
 | dropout       | 0.1               |
 | learning_rate | 3e-4              |
 | batch_size    | 32 – 64           |
+
+</details>
